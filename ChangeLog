@@ -1,5 +1,8 @@
 CheerpX: X86 virtualization for the Web
 
+Version 0.8.7:
+	* NPM package available
+
 Version 0.8.4:
 	* First pre-release tagged build
 
