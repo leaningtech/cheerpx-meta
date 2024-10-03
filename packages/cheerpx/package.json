@@ -3,6 +3,7 @@
   "version": "0.8.7",
   "type": "module",
   "main": "index.js",
+  "types": "index.d.ts",
   "description": "Run X86 binary applications and libraries in the browser",
   "repository": {
     "type": "git",
@@ -11,7 +12,8 @@
   "files": [
     "LICENSE.txt",
     "README.md",
-    "index.js"
+    "index.js",
+    "index.d.ts"
   ],
   "keywords": [
     "webassembly",
