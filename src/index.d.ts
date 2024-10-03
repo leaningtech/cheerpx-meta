@@ -8,16 +8,21 @@ export class DataDevice extends CheerpOSDevice {
 	writeFile(path: string, data: string): Promise<void>;
 }
 export class IDBDevice extends CheerpOSDevice {
+	static create(devName: string): Promise<IDBDevice>;
 }
 export class BlockDevice extends Device {
 }
 export class FileDevice extends BlockDevice {
+	static create(parent: CheerpOSDevice, fileName: string): Promise<FileDevice>;
 }
 export class GitHubDevice extends BlockDevice {
+	static create(url: string): Promise<GitHubDevice>;
 }
 export class HttpBytesDevice extends BlockDevice {
+	static create(url: string): Promise<HttpBytesDevice>;
 }
-interface Linux {
+export class Linux {
+	static create(optionals?: {mounts?: MountPointConfiguration[], networkInterface?: NetworkInterface}): Promise<Linux>;
 	delete(): void;
 	run(fileName: string, args: Array<string>, optionals?: { env?: string[]; cwd?: string; uid?: number; gid?: number; }): Promise<{ status: number }>;
 	setActivateConsole(activateFunc: (_: number) => void): EventListener;
@@ -26,11 +31,11 @@ interface Linux {
 	registerCallback(eventName: string, cb: EventListener): void;
 	unregisterCallback(eventName: string, cb: EventListener): void;
 }
-interface OverlayDevice extends BlockDevice {
-	delete(): void;
+export class OverlayDevice extends BlockDevice {
+	static create(src: BlockDevice, idb: IDBDevice): Promise<OverlayDevice>;
 }
-interface WebDevice extends CheerpOSDevice {
-	delete(): void;
+export class WebDevice extends CheerpOSDevice {
+	static create(url: string): Promise<WebDevice>;
 }
 interface MountPointConfiguration {
 	type: "ext2" | "dir" | "devs" | "proc";
@@ -44,31 +49,3 @@ interface NetworkInterface {
 	stateUpdateCb?: (state: number) => void;
 	netmapUpdateCb?: (map: any) => void;
 }
-declare const CheerpX: {
-	BlockDevice: {
-		new(metaStr: string, length: number): BlockDevice;
-	},
-	FileDevice: {
-		create(parent: CheerpOSDevice, fileName: string): Promise<FileDevice>;
-	},
-	GitHubDevice: {
-		create(url: string): Promise<GitHubDevice>;
-	},
-	HttpBytesDevice: {
-		create(url: string): Promise<HttpBytesDevice>;
-	},
-	IDBDevice: {
-		create(devName: string): Promise<IDBDevice>;
-	},
-	Linux: {
-		create(optionals?: {mounts?: MountPointConfiguration[], networkInterface?: NetworkInterface}): Promise<Linux>;
-	},
-	OverlayDevice: {
-		create(src: BlockDevice, idb: IDBDevice): Promise<OverlayDevice>;
-	},
-	WebDevice: {
-		create(url: string): Promise<WebDevice>;
-	}
-};
-
-export default CheerpX;*/
