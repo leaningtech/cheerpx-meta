@@ -1,7 +1,6 @@
 const version="0.8.9"
 const CheerpX = await import(`https://cxrtnc.leaningtech.com/${version}/cx.esm.js`);
 export const Linux = CheerpX.Linux;
-export const DataDevice = CheerpX.DataDevice;
 export const HttpBytesDevice = CheerpX.HttpBytesDevice;
 export const CloudDevice = CheerpX.CloudDevice;
 export const GitHubDevice = CheerpX.GitHubDevice;
