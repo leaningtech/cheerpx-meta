@@ -1,6 +1,6 @@
 CheerpX: X86 virtualization for the Web
 
-Version 0.8.9:
+Version 0.9.0:
 	* New strategy for ES6 version of CheerpX
 	* Support for TypeScript declarations
 
