@@ -1,8 +1,8 @@
 {
   "name": "@leaningtech/cheerpx",
-  "version": "0.4.0",
+  "version": "0.7.0",
   "type": "module",
-  "main": "src/index.js",
+  "main": "index.js",
   "description": "Run X86 binary applications and libraries in the browser",
   "repository": {
     "type": "git",
@@ -11,7 +11,7 @@
   "files": [
     "LICENSE.txt",
     "README.md",
-    "src/index.js"
+    "index.js"
   ],
   "keywords": [
     "webassembly",
@@ -23,7 +23,7 @@
     "leaningtech"
   ],
   "scripts": {
-    "prepack": "cp -rv ../../README.md ../../LICENSE.txt ../../src/ ."
+    "prepack": "cp ../../README.md ../../LICENSE.txt ../../src/index.js ."
   },
   "author": "Leaning Technologies",
   "license": "SEE LICENSE IN LICENSE.txt",
