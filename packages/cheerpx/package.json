@@ -1,6 +1,6 @@
 {
   "name": "cheerpx",
-  "version": "0.7.0",
+  "version": "0.8.7",
   "type": "module",
   "main": "index.js",
   "description": "Run X86 binary applications and libraries in the browser",
