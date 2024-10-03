@@ -7,7 +7,9 @@
 CheerpX enables running X86 binary applications and libraries in the browser within a secure WebAssembly sandbox.
 
 [Documentation](https://cheerpx.io/docs)
+
 [Issues](https://github.com/leaningtech/cheerpx-meta/issues)
+
 [Discord server](https://discord.leaningtech.com)
 
 ## What is CheerpX?
