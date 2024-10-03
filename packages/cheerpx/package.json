@@ -1,0 +1,32 @@
+{
+  "name": "cheerpx",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "src/index.js",
+  "description": "Run X86 binary applications and libraries in the browser",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leaningtech/cheerpx-meta.git"
+  },
+  "files": [
+    "LICENSE.txt",
+    "README.md",
+    "src/index.js"
+  ],
+  "keywords": [
+    "webassembly",
+    "x86",
+    "virtualization",
+    "jit",
+    "compiler",
+    "wasm",
+    "leaningtech"
+  ],
+  "scripts": {
+    "prepack": "cp -rv ../../README.md ../../LICENSE.txt ../../src/ ."
+  },
+  "author": "Leaning Technologies",
+  "license": "SEE LICENSE IN LICENSE.txt",
+  "bugs": "https://github.com/leaningtech/cheerpx-meta/issues",
+  "homepage": "https://cheerpx.io"
+}

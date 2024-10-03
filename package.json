@@ -1,0 +1,7 @@
+{
+  "name": "cheerpx-meta",
+  "workspaces": [
+    "packages/cheerpx",
+    "packages/cheerpx-lt"
+  ]
+}
