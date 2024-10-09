@@ -1,8 +1,7 @@
 CheerpX: X86 virtualization for the Web
 
 Version 0.9.1:
-	* New feature1
-	* New feature2
+	* Multiple fixes for TypeScrypt declarations
 
 Version 0.9.0:
 	* New strategy for ES6 version of CheerpX
