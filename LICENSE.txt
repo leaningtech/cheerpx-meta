@@ -1,1 +1,388 @@
-Proprietary
+Please read this Licence carefully before using, linking or integrating the
+Software (CheerpX, as defined below). By using, linking or integrating the
+Software, you are agreeing to be bound by this Licence. IF YOU DO NOT ACCEPT
+THE TERMS AND CONDITIONS OF THIS LICENCE, DO NOT USE, LINK, OR INTEGRATE ANY OF
+THE LICENSED SOFTWARE.
+
+DEFINITIONS
+
+Software means CheerpX, an x86 virtualisation technology for running executables
+and operating systems on web browsers.
+
+Licensee Application means a Licensee's web application (including, but not
+limited to, the collection of HTML, CSS, JavaScript and WebAssembly files that
+constitute the client-side component of a web-based software application) with
+which the Software is integrated.
+
+Integrate means to add any part of CheerpX to a web page (including, but not
+limited to, by inserting the cx.js or cx.esm.js script on a web page, and by
+calling any of the CheerpX API functions) so that it can run one or more x86
+binary executables.
+
+Distribute means to make available to end-users of Licensee Application the
+original and copies of the Software as part of Licensee Application.
+
+Licence Agreement or Agreement means this document.
+
+Commercial Licence means a separate Licence Agreement between Licensor and
+Licensee allowing uses of the Software beyond the limitations imposed by this
+Agreement.
+
+Licensee or You means an individual or entity exercising rights under and
+complying with the terms of this Licence who has not previously violated the
+terms of this Licence with respect to the Software.
+
+LICENCE AGREEMENT
+
+This Licence Agreement is by and between Leaning Technologies Ltd, a duly
+registered company in the United Kingdom whose principal place of business is
+3rd Floor, 207 Regent Street, London W1B 4HH, United Kingdom and Licensee.
+
+1. GRANT AND SCOPE OF LICENCE
+
+1.1 In consideration of you agreeing to abide by the terms of this Licence, we
+grant to you a non- exclusive, non-transferable licence to use the Software and
+the Documents on the terms of this licence.
+
+1.2 You may:
+
+  (a) use, link and integrate the Software in a Licensee Application for
+      permitted purposes only;
+
+  (b) provided you comply with the provisions in condition 2, make an unlimited
+      number of copies of the Software for operational and back-up purposes;
+
+  (c) provided you comply with the provisions in Clause 2.1(d) and 2.1(i),
+      distribute the Software as part of Licensee Application;
+
+  (d) receive and use any free supplementary software code or update of the
+      Software incorporating "patches" and corrections of errors as may be
+      provided by us from time to time; and
+
+  (e) use any Documents in support of the use permitted under condition.
+
+1.3 This Licence applies to you as the Licensee, and is provided for you to use
+within your Group of businesses as may be further described or expressly listed
+in your Order Form. By “Group” we mean related businesses, organisations and
+the like who exercise, or are under common, Control over you and/or each entity
+within that Group. If you apply this Licence to your Group, you will be legally
+responsible for each of them as though they had signed up to this Licence
+directly. By using the capitalised term “Control” we refer to the term as it is
+understood according to section 1124 of the Corporation Tax Act 2010.
+
+1.4 Where we refer to “permitted purposes” we mean that you can integrate the
+Software as part of a Licensee Application for any of the following purposes:
+
+  (a) If You are an individual, for any purpose (including but not limited to:
+      personal projects that do or don’t generate revenue, open-source projects,
+      public-facing applications);
+
+  (b) If You are a Business, strictly for the purpose of technical evaluation and
+      testing of the Software. You may not use the software for any other business
+      purpose, including integrating it into a Licensee Application used in production
+      for any business purpose, integrating it into a Licensee Application available
+      to the public, or generally available to Your employees.
+
+      Our determination of the validity of your purposes, and whether or not they are
+      permitted by or within the scope of this Licence, will be final in the event of
+      any dispute.
+
+1.5 Where we refer to “Licensee Application” that refers to the web application
+forming the group of assets comprising of any number of HTML assets (such as
+HTML files, CSS files, JavaScript files, WebAssembly files), x86 executables and
+assets used by said HTML assets and executables, which are embedded in a single
+HTML file, as drawn from a single designated origin domain in relation to which
+the Software has been specifically integrated.
+
+1.6 Our liability to you is limited pursuant to condition 4 below. You will
+however still be liable to us under this Licence, where that is reasonable to
+protect our own commercial interest in and to the Software and/or Documentation.
+You have a choice as to whether you procure a Commercial Licence or not, and you
+accept the risks associated with your decision in this regard, you should
+acquire appropriate insurance to protect you from any perceived risk associated
+with this Licence.
+
+1.7 Unless the context indicates to the contrary, any reference to statute,
+legislation, laws, guidance and codes of conduct are to those existing under
+laws of England and Wales.
+
+2. RESTRICTIONS
+
+2.1 Except as expressly set out in this Licence, or as permitted by any local
+law, you warrant and undertake:
+
+  (a) Not to use the Software for any purpose other than the permitted purposes;
+  (b) Not to use the Software and/or the Documentation for any purpose either
+      directly or indirectly relating to:
+
+    (i) Nuclear energy, hospital management, life support systems and or any other
+        public infrastructure or any high risk, mission or business critical processing
+        of any nature in any industry.
+
+    (ii) Gambling, currency trading, pay-day loans, pornography or any illegal or
+         otherwise criminal purpose.
+
+  (c) not to copy the Software or Documents except where such copying is
+      incidental to normal and expressly permitted use of the Software, or where it is
+      necessary for the purpose of back-up or operational security. For the avoidance
+      of doubt, there is no numerical cap or limit on the sum of copies permitted
+      under this Licence as long as they accord with the use case prescribed herein
+      and remain under the control of the Licensee or its Group at all times;
+
+  (d) not to assign, rent, lease, sub-licence, loan, translate, merge, adapt, vary
+      or modify the Software or Documents, except if expressly authorised by us.
+      Where the Licensee needs to assign the Licence to another member of its Group,
+      for example as part of a Group restructuring exercise, we will not unreasonably
+      refuse such assignments subject to Licensee or the relevant Group member
+      providing reasonable written notice of the proposed assignment in advance;
+
+  (e) not to make alterations to, or modifications of, the whole or any part of
+      the Software, nor permit the Software or any part of it to be combined with, or
+      become incorporated in, any other programs, except to the limited extent as is
+      strictly required to ensure the operation of Licensee Applications, except if
+      expressly authorised by us;
+
+  (f) not to disassemble, decompile, reverse-engineer or create derivative works
+      based on the whole or any part of the Software nor attempt to do any such thing;
+
+  (g) to keep all copies of the Software secure and to maintain accurate and
+      up-to-date records of the number and locations of all copies of the Software;
+
+  (h) to include our copyright notice, and any other applicable third party
+      notice, on all entire and partial copies you make of the Software on any medium;
+
+  (i) not to provide or otherwise make available the Software in whole or in part
+      (including but not limited to program listings, object and source program
+      listings, object code and source code), in any form to any person other than
+      your employees without prior written consent from us;
+
+  (j) to comply with all applicable technology control or export laws and
+      regulations;
+
+  (k) not use the Software via any communications network or by means of remote
+      access to the extent that such end reproduction or presentation would otherwise
+      breach this Licence; and
+
+  (l) not to use the Software to directly or indirectly develop a replacement or
+      competing product to the Software.
+
+3. INTELLECTUAL PROPERTY RIGHTS
+
+3.1 You acknowledge that all intellectual property rights in the Software and
+the Documents anywhere in the world belong to us, that rights in the Software
+are licenced (not sold) to you, and that you have no rights in, or to, the
+Software or the Documents other than the right to use them in accordance with
+the terms of this Licence.
+
+3.2 You acknowledge that you have no right to have access to the Software in
+source code form and that any materials we provide for demonstration purposes
+alongside the Software or Documentation are not provided for you to use or
+retain other than for the strict purpose of demonstration or testing.
+
+3.3 We acknowledge that you will own all intellectual property rights in the
+Licensee Applications, to the extent they do not include the Software or the
+Documentation, and any data input or data output arising independently from the
+operation of the Software shall remain your property, or that of your users
+where applicable and this agreement shall not operate to transfer ownership or
+control of any personal data whatsoever. 3.4 For the avoidance of doubt,
+neither party’s pre-existing rights regarding any intellectual property shall be
+affected by virtue of this Licence, except for the limited licence grant
+expressly set out herein.
+
+3.5 You acknowledge that this Licence does not convey any right to any third
+party software except to the extent it is embedded by us within the Software.
+To the extent that third party software is embedded within the Software or
+Documents that is provided to you on an “as-is” basis and may contain elements
+of open source software. To the extent that open source software (referred to
+as Free Libre Open Source Software) is included in the Software or Documents, we
+warrant that the applicable third party licence is compatible with the scope of
+use we have expressly authorised, and that no further commercial licence is
+required. You acknowledge that your rights to third party software are subject
+to separate licensing by that third party, and that you must judge whether or
+not any change of use may breach any applicable third party licences.
+
+4. LIMITED WARRANTY
+
+4.1 The Software and Documentation is provided to you strictly on an “as-is”
+basis without any warranty whatsoever, to the exclusion of all laws, which may
+otherwise apply or be implied, to the fullest extent that such exclusion is
+legally permissible.
+
+4.2 You have the option of purchasing a Commercial Licence or bespoke support
+from us subject to separate agreement. If you do not wish to purchase support
+from us, then you are encouraged to consider insurance to cover the cost of the
+Software breaking down or for any loss you might suffer as a result of its
+unavailability. Where you have not purchased support from us as a separate
+service, we will use commercially reasonable endeavours to maintain and keep the
+Software up to date and functional, but we reserve the right to replace certain
+core functionality, or to end of life non-core functionality, where we consider
+that reasonable and to the extent that it forms part of our product roadmap
+which applies to all customers and not just to you. We reserve the right to
+modify our development objectives and roadmap at all times, and you acknowledge
+that any functionality or feature not presently forming the Software is not
+guaranteed to be included now or at any time in the future. 5. PAYMENT
+
+5.1 The Software and Documents supplied under this Licence do not require the
+payment of a Licence fee. 5.2 True-up. In any event where you have exceeded
+the licenced use case as prescribed by this Licence, the excessive element of
+your use shall be judged against the permitted uses, and the Licence Fee due for
+such excessive use shall be calculated based on our standard Rate Card applied
+to Commercial Licences. 6. LIMITATION OF LIABILITY
+
+6.1 You acknowledge that the Software has not been developed to meet your
+individual requirements, including any particular cybersecurity requirements you
+might be subject to under law or otherwise, and that it is therefore your
+responsibility to ensure that the facilities and functions of the Software meet
+your requirements.
+
+6.2 We only supply the Software and Documents for any permitted use by You, and
+you agree not to use the Software or Documents for any re-sale purposes,
+including but not limited to any instance where such re-sale would ordinarily be
+similar/the same as our provision of the Software or Documents to you.
+
+6.3 We shall not in any circumstances whatever be liable to you, whether in
+contract, tort (including negligence), breach of statutory duty, or otherwise,
+arising under or in connection with the Licence for: (a) loss of profits, sales,
+business, or revenue;
+
+  (b) business interruption;
+
+  (c) loss of anticipated savings;
+
+  (d) loss or corruption of data or information;
+
+  (e) loss of business opportunity, goodwill or reputation;
+
+  (f) where any of the losses set out in condition 6.3(a) to condition 6.3(e) are
+      direct or indirect; or
+
+  (g) any special, indirect or consequential loss, damage, charges or expenses.
+
+6.4 Other than the losses set out in condition 6.3 (for which we are not
+liable), our maximum aggregate liability under or in connection with this
+Licence whether in contract, tort (including negligence) or otherwise, shall in
+all circumstances be limited to a sum equal to the amount of the Licence Fee you
+have paid to us over the course of the 12 months immediately preceding the
+events giving rise to the relevant claim. This maximum cap does not apply to
+condition 6.5.
+
+6.5 Nothing in this Licence shall limit or exclude our liability for:
+
+  (a) death or personal injury resulting from our negligence;
+
+  (b) fraud or fraudulent misrepresentation;
+
+  (c) any other liability that cannot be excluded or limited by English law.
+
+6.6 This Licence sets out the full extent of our obligations and liabilities in
+respect of the supply of the Software and Documents. Except as expressly stated
+in this Licence, there are no conditions, warranties, representations or other
+terms, express or implied, that are binding on us. Any condition, warranty,
+representation or other term concerning the supply of the Software and Documents
+which might otherwise be implied into, or incorporated in, this Licence whether
+by statute, common law or otherwise, is excluded to the fullest extent permitted
+by law. 7. TERMINATION
+
+7.1 We may terminate this Licence immediately by written notice to you if you
+commit a material or persistent breach of this Licence which you fail to remedy
+  (if remediable) within 30 days after the service of written notice requiring you
+to do so, or this Licence may terminate immediately without notice upon the
+expiry of any period of use we specify is applicable to this Licence for the
+Software or Documents.
+
+7.2 On termination for any reason:
+
+  (a) all rights granted to you under this Licence shall cease;
+
+  (b) you must make payment of any outstanding charges or fees;
+
+  (c) you must immediately cease all activities authorised by this Licence; and
+
+  (d) you must immediately and permanently delete or remove the Software from all
+      computer equipment in your possession, and immediately destroy or return to us
+      (at our option) all copies of the Software and Documents then in your
+      possession, custody or control and, in the case of destruction, certify to us
+      that you have done so.
+
+7.3 Your obligation to delete Software or Documentation pursuant to condition
+7.2(d) above shall apply to the fullest extent legally possible, taking into
+account and allowing for any strict legal duty you may have to retain
+information in an immutable and protected format for the duration of any hard
+mirror or other fixed retention cycles or periods. Where you are subject to
+legal obligations of the nature referred to in this condition, your obligation
+pursuant to condition 7.2(d) above shall instead apply from the date upon which
+you are no longer strictly legally required to retain relevant information. For
+the avoidance of any doubt you will have no right to make any internal or
+commercial use of the Software or Documentation during this retention period,
+but you will remain fully liable to us and your obligations and duties under
+this Licence shall continue until you have complied with condition 7.2(d) in
+full.
+
+8. EVENTS OUTSIDE OUR CONTROL
+
+8.1 We will not be liable or responsible for any failure to perform, or delay in
+performance of, any of our obligations under this Licence that is caused by an
+Event Outside Our Control. An Event Outside Our Control is defined below in
+condition 8.2.
+
+8.2 An Event Outside Our Control means any act or event beyond our reasonable
+control, including without limitation failure of public or private
+telecommunications networks.
+
+8.3 If an Event Outside Our Control takes place that affects the performance of
+our obligations under this Licence:
+
+  (a) our obligations under this Licence will be suspended and the time for
+      performance of our obligations will be extended for the duration of the Event
+      Outside Our Control; and
+
+  (b) we will use our reasonable endeavours to find a solution by which our
+      obligations under this Licence may be performed despite the Event Outside Our
+      Control.
+
+9. HOW WE MAY USE YOUR PERSONAL INFORMATION
+
+Under data protection legislation, we will only process the personal information
+of business contacts for the purpose of administering this Licence and our
+services generally. You will not provide us with, nor shall we generally have
+any access to, any personal data relating to users of the Software or
+Documentation. The legal base’s upon which we process any personal data related
+to this Licence shall be performance of contract, enforcement of legal
+rights/claims and our legitimate interest in informing you of offers and
+announcements relating to the Software and Documentation. We will not disclose
+personal data to third parties for marketing purposes unless you expressly
+consent to this.
+
+10. OTHER IMPORTANT TERMS
+
+10.1 We may transfer our rights and obligations under this Licence to another
+organisation, but this will not affect your rights or our obligations under this
+Licence. 10.2 You may only transfer your rights or your obligations under this
+Licence to another person if we agree in writing.
+
+10.3 This Licence and any document expressly referred to in it constitutes the
+entire agreement between us and supersedes and extinguishes all previous
+agreements, promises, assurances, warranties, representations and understandings
+between us, whether written or oral, relating to its subject matter. You agree
+that you shall have no remedies in respect of any statement, representation,
+assurance or warranty (whether made innocently or negligently) that is not set
+out in this Licence or any document expressly referred to in it. You agree that
+you shall have no claim for innocent or negligent misrepresentation or negligent
+misstatement based on any statement in this Licence or any document expressly
+referred to in it.
+
+10.4 If we fail to insist that you perform any of your obligations under this
+Licence, or if we do not enforce our rights against you, or if we delay in doing
+so, that will not mean that we have waived our rights against you and will not
+mean that you do not have to comply with those obligations. If we do waive a
+default by you, we will only do so in writing, and that will not mean that we
+will automatically waive any later default by you.
+
+10.5 Each of the conditions of this Licence operates separately. If any court
+or competent authority decides that any of them are unlawful or unenforceable,
+the remaining conditions will remain in full force and effect.
+
+10.6 This Licence, its subject matter and its formation (and any non-
+contractual disputes or claims) are governed by English law. We both
+irrevocably agree to the exclusive jurisdiction of the courts of England and
+Wales.
