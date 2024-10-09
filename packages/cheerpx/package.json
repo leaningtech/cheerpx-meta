@@ -25,7 +25,7 @@
     "leaningtech"
   ],
   "scripts": {
-    "prepack": "cp ../../README.md ../../LICENSE.txt ../../src/index.js ../../src/index.d.ts ."
+    "prepack": "cp ../../README.md ../../LICENSE.txt ../../COPYRIGHT.txt ../../src/index.js ../../src/index.d.ts ."
   },
   "author": "Leaning Technologies",
   "license": "SEE LICENSE IN LICENSE.txt",
