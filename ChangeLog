@@ -1,5 +1,9 @@
 CheerpX: X86 virtualization for the Web
 
+Version 1.0.1:
+	* New feature1
+	* New feature2
+
 Version 1.0.0:
 	* Add IDBDevice.readFileAsBlob API
 	* First stable release
