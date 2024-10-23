@@ -1,5 +1,8 @@
 CheerpX: X86 virtualization for the Web
 
+Version 1.0.4:
+	* Fix a subtle issue that prevented grep from working
+
 Version 1.0.3:
 	* Multiple fixes for dynamic Xorg resizing
 
