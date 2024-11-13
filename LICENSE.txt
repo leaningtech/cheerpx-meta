@@ -220,14 +220,19 @@ that reasonable and to the extent that it forms part of our product roadmap
 which applies to all customers and not just to you. We reserve the right to
 modify our development objectives and roadmap at all times, and you acknowledge
 that any functionality or feature not presently forming the Software is not
-guaranteed to be included now or at any time in the future. 5. PAYMENT
+guaranteed to be included now or at any time in the future.
+
+5. PAYMENT
 
 5.1 The Software and Documents supplied under this Licence do not require the
-payment of a Licence fee. 5.2 True-up. In any event where you have exceeded
-the licenced use case as prescribed by this Licence, the excessive element of
-your use shall be judged against the permitted uses, and the Licence Fee due for
-such excessive use shall be calculated based on our standard Rate Card applied
-to Commercial Licences. 6. LIMITATION OF LIABILITY
+payment of a Licence fee.
+
+5.2 True-up. In any event where you have exceeded the licenced use case as
+prescribed by this Licence, the excessive element of your use shall be judged
+against the permitted uses, and the Licence Fee due for such excessive use shall
+be calculated based on our standard Rate Card applied to Commercial Licences.
+
+6. LIMITATION OF LIABILITY
 
 6.1 You acknowledge that the Software has not been developed to meet your
 individual requirements, including any particular cybersecurity requirements you
@@ -281,7 +286,9 @@ terms, express or implied, that are binding on us. Any condition, warranty,
 representation or other term concerning the supply of the Software and Documents
 which might otherwise be implied into, or incorporated in, this Licence whether
 by statute, common law or otherwise, is excluded to the fullest extent permitted
-by law. 7. TERMINATION
+by law.
+
+7. TERMINATION
 
 7.1 We may terminate this Licence immediately by written notice to you if you
 commit a material or persistent breach of this Licence which you fail to remedy
