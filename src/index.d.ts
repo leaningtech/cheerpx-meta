@@ -21,6 +21,9 @@ export class GitHubDevice extends BlockDevice {
 export class HttpBytesDevice extends BlockDevice {
 	static create(url: string): Promise<HttpBytesDevice>;
 }
+export class CloudDevice extends BlockDevice {
+	static create(url: string): Promise<CloudDevice>;
+}
 export class Linux {
 	static create(optionals?: {mounts?: MountPointConfiguration[], networkInterface?: NetworkInterface}): Promise<Linux>;
 	delete(): void;
