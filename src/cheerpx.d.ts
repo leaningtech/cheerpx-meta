@@ -14,6 +14,8 @@ export interface GitHubDevice extends BlockDevice {
 }
 export interface HttpBytesDevice extends BlockDevice {
 }
+export interface CloudDevice extends BlockDevice {
+}
 export interface IDBDevice extends CheerpOSDevice {
 	readFileAsBlob(path: string): Promise<Blob>;
 }
