@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CheerpX Test</title>
+    <script src="https://cxrtnc.leaningtech.com/1.0.6/cx.js"></script>
+    <script type="module">
+      var blockDevice = await CheerpX.HttpBytesDevice.create(
+        "/cheerpXImage.ext2"
+      );
+      var overlayDevice = await CheerpX.OverlayDevice.create(
+        blockDevice,
+        await CheerpX.IDBDevice.create("block1")
+      );
+
+      const cx = await CheerpX.Linux.create({
+        mounts: [{ type: "ext2", path: "/", dev: overlayDevice }],
+        networkInterface: { authKey: "YOUR KEY", netmapUpdateCb },
+      });
+
+      function netmapUpdateCb(map) {
+        const currentIp = map.self.addresses[0];
+        console.log(`Current IP address ${currentIp}`);
+      }
+
+      await cx.run("/usr/bin/python3", ["-m", "http.server"]);
+    </script>
+  </head>
+  <body style="height: 100%; background: black"></body>
+</html>
