@@ -1,8 +1,7 @@
 CheerpX: X86 virtualization for the Web
 
 Version 1.0.6:
-	* New feature1
-	* New feature2
+	* Fix glitches in keyboard handling
 
 Version 1.0.5:
 	* Improve support for keyboard and mouse events
