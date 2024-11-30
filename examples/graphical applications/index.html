@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en" style="height: 100%;">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Graphical application</title>
+    <script src="https://cxrtnc.leaningtech.com/1.0.6/cx.js"></script>
+    <script type="module">
+      var blockDevice = await CheerpX.HttpBytesDevice.create("/cheerpXImage.ext2");
+      var overlayDevice = await CheerpX.OverlayDevice.create(
+        blockDevice,
+        await CheerpX.IDBDevice.create("block1")
+      );
+
+      const cx = await CheerpX.Linux.create({
+        mounts: [{ type: "ext2", path: "/", dev: overlayDevice }],
+      });
+
+    // Setup the text console
+    cx.setConsole(document.getElementById("console"));
+    // // Setup the KMS canvas with the desired resolution, assume `display` is a <canvas> element
+    cx.setKmsCanvas(document.getElementById("display"), 1024, 768);
+    // // Start Xorg
+    await cx.run("/usr/bin/Xorg", ["-retro"]);
+
+    await cx.run("/bin/bash", ["--login"], {
+    env: [
+        "HOME=/home/user",
+        "USER=user",
+        "SHELL=/bin/bash",
+        "EDITOR=vim",
+        "LANG=en_US.UTF-8",
+        "LC_ALL=C",
+    ],
+    cwd: "/home/user",
+    uid: 1000,
+    gid: 1000,
+    });
+
+    </script>
+  </head>
+  <body style="height: 100%; background: black;">
+    <pre id="console" style="height: 100%;"></pre>
+    <canvas id="display"></canvas>
+  </body>
+</html>
