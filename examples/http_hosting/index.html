@@ -2,7 +2,7 @@
 <html lang="en" style="height: 100%">
   <head>
     <meta charset="UTF-8" />
-    <title>CheerpX Test</title>
+    <title>HTTP hosting</title>
     <script src="https://cxrtnc.leaningtech.com/1.0.6/cx.js"></script>
     <script type="module">
       var blockDevice = await CheerpX.HttpBytesDevice.create(
@@ -23,8 +23,12 @@
         console.log(`Current IP address ${currentIp}`);
       }
 
+      cx.setConsole(document.getElementById("console"));
+
       await cx.run("/usr/bin/python3", ["-m", "http.server"]);
     </script>
   </head>
-  <body style="height: 100%; background: black"></body>
+  <body style="height: 100%; background: black">
+    <pre id="console" style="height: 100%;"></pre>
+  </body>
 </html>
