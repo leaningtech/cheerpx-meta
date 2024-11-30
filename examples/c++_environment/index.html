@@ -1,65 +1,64 @@
-<!DOCTYPE html>
-<html lang="en" style="height: 100%">
+<!doctype html>
+<html lang="en" style="height: 100%;">
   <head>
     <meta charset="UTF-8" />
     <title>C++ environment</title>
-    <script src="https://cxrtnc.leaningtech.com/1.0.6/cx.js"></script>
-    <script type="module">
-      var blockDevice = await CheerpX.HttpBytesDevice.create(
-        "/cheerpXImage.ext2"
-      );
-      var overlayDevice = await CheerpX.OverlayDevice.create(
-        blockDevice,
-        await CheerpX.IDBDevice.create("block1")
-      );
+    <script src="https://cxrtnc.leaningtech.com/1.0.6/cx.js"></script><script type="module">
+        var blockDevice = await CheerpX.HttpBytesDevice.create("/cheerpXImage.ext2");
+        var overlayDevice = await CheerpX.OverlayDevice.create(
+          blockDevice,
+          await CheerpX.IDBDevice.create("block1")
+        );
+        const dataDevice =  await CheerpX.DataDevice.create();
 
-      const dataDevice = await CheerpX.DataDevice.create();
+        const cx = await CheerpX.Linux.create({
+            mounts: [{ type: "ext2", path: "/", dev: overlayDevice },
+                     { type: "dir", path: "/data", dev: dataDevice }
+            ],
+        });
 
-      const srcCode = `
-      #include <iostream>
+        cx.setConsole(document.getElementById("console"));
 
-      int main()
-      {
-          std::cout << "Hello World" << std::endl;
-          return 0;
-      }
-      `;
+        async function compileAndRun(cx, dataDevice, srcCode, inputName, outputName)
+        {
+            // Make the source code available as a file
+            await dataDevice.writeFile("/" + inputName, srcCode)
+            // Compile the source code by calling g++
+            await cx.run("/usr/bin/g++", ["/data/" + inputName, "-o", "/" + outputName], {
+                env: [
+                    "PATH=/usr/bin:/bin:/usr/local/bin:/usr/bin/i386-linux-gnu"
+                ]
+            });
+            await cx.run("/" + outputName, []);
+        }
 
-      const cx = await CheerpX.Linux.create({
-        mounts: [
-          { type: "ext2", path: "/", dev: overlayDevice },
-          { type: "dir", path: "/data", dev: dataDevice },
-          { type: "devs", path: "/dev" },
-        ],
-        env: [
-          "PATH=/usr/bin:/bin:/usr/local/bin:/usr/bin/i686-linux-gnu",
-          "HOME=/home/user",
-          "USER=user",
-          "SHELL=/bin/bash",
-          "EDITOR=vim",
-          "LANG=en_US.UTF-8",
-          "LC_ALL=C",
-        ],
-      });
+        const srcCode = `
+        #include <iostream>
 
-      async function compileAndRun(cx, dataDevice, srcCode, inputName, outputName) {
-        // Make the source code available as a file
-        await dataDevice.writeFile("/" + inputName, srcCode);
+        int main()
+        {
+            std::cout << "Hello World" << std::endl;
+            return 0;
+        }
+        `;
+        await compileAndRun(cx, dataDevice, srcCode, "hello.cpp", "hello");
 
-        // Compile the source code by calling g++ and set path for the linker
-        const compileResult = await cx.run("/usr/bin/g++", [
-          "/data/" + inputName,
-          "-o",
-          "/" + outputName,
-          "-B/usr/bin",
-        ]);
-
-        await cx.run("/" + outputName, []);
-      }
-
-      await compileAndRun(cx, dataDevice, srcCode, "hello.cpp", "hello");
+        await cx.run("/bin/bash", ["--login"], {
+            env: [
+                "HOME=/home/user",
+                "USER=user",
+                "SHELL=/bin/bash",
+                "EDITOR=vim",
+                "LANG=en_US.UTF-8",
+                "LC_ALL=C",
+            ],
+            cwd: "/home/user",
+            uid: 1000,
+            gid: 1000,
+        });
     </script>
   </head>
-  <body style="height: 100%; background: black">
+  <body style="height: 100%; background: black;">
+    <pre id="console" style="height: 100%;"></pre>
   </body>
 </html>
