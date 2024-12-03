@@ -1,4 +1,4 @@
-This README will guide you through creating a custom disk image using a Dockerfile and converting it into an ext2 image for use with tools like CheerpX. By the end of this guide, you'll have a custom disk image ready for use. Follow the steps below to get started.
+This README will guide you through creating a custom disk image using a Dockerfile and converting it into an ext2 image for use with tools like CheerpX. Additionally, it will explain how to set up an Nginx server to serve the image and related files. By the end of this guide, you'll have a custom disk image ready for use and a functioning server to host it. Follow the steps below to get started.
 
 ## 1. Creating the Disk Image
 
