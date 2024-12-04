@@ -13,15 +13,22 @@
 
       const cx = await CheerpX.Linux.create({
         mounts: [{ type: "ext2", path: "/", dev: overlayDevice }],
-        networkInterface: { authKey: "YOUR KEY", netmapUpdateCb },
+        networkInterface: { authKey: "YOUR KEY", netmapUpdateCb, stateUpdateCb },
       });
 
       // Setup the text console
       cx.setConsole(document.getElementById("console"));
+      // Start the networking subsystem
+      cx.networkLogin();
 
       function netmapUpdateCb(map) {
         const currentIp = map.self.addresses[0];
         console.log(`Current IP address ${currentIp}`);
+      }
+      function stateUpdateCb(state) {
+        if (state == 6 ) {
+          console.log("Connected");
+        }
       }
       // Start the builin python HTTP server, it will be reachable
       // from other devices in your Tailscale network

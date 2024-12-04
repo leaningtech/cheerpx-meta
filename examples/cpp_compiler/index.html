@@ -27,9 +27,9 @@
           // Make the source code available as a file
           await dataDevice.writeFile("/" + inputName, srcCode)
           // Compile the source code by calling g++
-          await cx.run("/usr/bin/g++", ["/data/" + inputName, "-o", "/" + outputName], {
+          await cx.run("/usr/bin/g++", ["-v", "/data/" + inputName, "-o", "/" + outputName], {
               env: [
-                  "PATH=/usr/bin:/bin:/usr/local/bin:/usr/bin/i386-linux-gnu"
+                  "PATH=/usr/bin"
               ]
           });
           await cx.run("/" + outputName, []);
