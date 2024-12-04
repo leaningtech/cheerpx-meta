@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%;">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Bash shell</title>
+    <script src="https://cxrtnc.leaningtech.com/1.0.7/cx.js"></script>
+    <script type="module">
+      var blockDevice = await CheerpX.HttpBytesDevice.create("/cheerpXImage.ext2");
+      var overlayDevice = await CheerpX.OverlayDevice.create(
+        blockDevice,
+        await CheerpX.IDBDevice.create("block1")
+      );
+
+      const cx = await CheerpX.Linux.create({
+        mounts: [{ type: "ext2", path: "/", dev: overlayDevice },
+
+        ],
+      });
+
+      // Setup the text console
+      cx.setConsole(document.getElementById("console"));
+      // Run the Bash shell in the browser
+      await cx.run("/bin/bash", []);
+
+    </script>
+  </head>
+  <body style="height: 100%; background: black;">
+    <pre id="console" style="height: 100%;"></pre>
+  </body>
+</html>
