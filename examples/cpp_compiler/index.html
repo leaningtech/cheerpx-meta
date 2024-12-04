@@ -5,23 +5,29 @@
     <title>C++ compiler</title>
     <script src="https://cxrtnc.leaningtech.com/1.0.7/cx.js"></script>
     <script type="module">
-      var blockDevice = await CheerpX.HttpBytesDevice.create("/cheerpXImage.ext2");
-      var overlayDevice = await CheerpX.OverlayDevice.create(
-        blockDevice,
-        await CheerpX.IDBDevice.create("block1")
-      );
+      // Create a read-only block device for a disk image stored on the HTTP server
+      const blockDevice = await CheerpX.HttpBytesDevice.create("/cheerpXImage.ext2");
+      // Make the block device read-write using a persistent IndexedDB overlay
+      const idbDevice = await CheerpX.IDBDevice.create("block1");
+      const overlayDevice = await CheerpX.OverlayDevice.create(blockDevice, idbDevice);
+      // Add a device to expose JavaScript data in the VM
       const dataDevice =  await CheerpX.DataDevice.create();
-
+      // Initialize the CheerpX environment
+      const mountPoints = [
+        // Use the disk image as the filesystem root
+        { type: "ext2", path: "/", dev: overlayDevice },
+        // Add the DataDevice to a known location
+        { type: "dir", path: "/data", dev: dataDevice },
+        // Add the required Linux pseudo-filesystem
+        {type:"devs", path:"/dev"},
+        {type:"devpts", path:"/dev/pts"},
+        {type:"proc", path:"/proc"}
+      ];
       const cx = await CheerpX.Linux.create({
-        mounts: [
-          { type: "ext2", path: "/", dev: overlayDevice },
-          { type: "dir", path: "/data", dev: dataDevice }
-        ],
+        mounts: mountPoints
       });
-
       // Setup the text console
       cx.setConsole(document.getElementById("console"));
-
       async function compileAndRun(cx, dataDevice, srcCode, inputName, outputName)
       {
           // Make the source code available as a file

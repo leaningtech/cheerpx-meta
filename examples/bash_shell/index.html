@@ -5,23 +5,27 @@
     <title>Bash shell</title>
     <script src="https://cxrtnc.leaningtech.com/1.0.7/cx.js"></script>
     <script type="module">
-      var blockDevice = await CheerpX.HttpBytesDevice.create("/cheerpXImage.ext2");
-      var overlayDevice = await CheerpX.OverlayDevice.create(
-        blockDevice,
-        await CheerpX.IDBDevice.create("block1")
-      );
-
+      // Create a read-only block device for a disk image stored on the HTTP server
+      const blockDevice = await CheerpX.HttpBytesDevice.create("/cheerpXImage.ext2");
+      // Make the block device read-write using a persistent IndexedDB overlay
+      const idbDevice = await CheerpX.IDBDevice.create("block1");
+      const overlayDevice = await CheerpX.OverlayDevice.create(blockDevice, idbDevice);
+      // Initialize the CheerpX environment
+      const mountPoints = [
+        // Use the disk image as the filesystem root
+        { type: "ext2", path: "/", dev: overlayDevice },
+        // Add the required Linux pseudo-filesystem
+        {type:"devs", path:"/dev"},
+        {type:"devpts", path:"/dev/pts"},
+        {type:"proc", path:"/proc"}
+      ];
       const cx = await CheerpX.Linux.create({
-        mounts: [{ type: "ext2", path: "/", dev: overlayDevice },
-
-        ],
+        mounts: mountPoints
       });
-
       // Setup the text console
       cx.setConsole(document.getElementById("console"));
       // Run the Bash shell in the browser
       await cx.run("/bin/bash", []);
-
     </script>
   </head>
   <body style="height: 100%; background: black;">

