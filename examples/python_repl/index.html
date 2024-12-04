@@ -8,7 +8,7 @@
       // Create a read-only block device for a disk image stored on the HTTP server
       const blockDevice = await CheerpX.HttpBytesDevice.create("/cheerpXImage.ext2");
       // Make the block device read-write using a persistent IndexedDB overlay
-      const idbDevice = await CheerpX.IDBDevice.create("block1");
+      const idbDevice = await CheerpX.IDBDevice.create("block_python");
       const overlayDevice = await CheerpX.OverlayDevice.create(blockDevice, idbDevice);
       // Initialize the CheerpX environment
       const mountPoints = [
