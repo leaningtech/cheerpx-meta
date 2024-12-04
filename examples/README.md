@@ -1,4 +1,6 @@
-This README will guide you through creating a custom disk image using a Dockerfile and converting it into an ext2 image for use with tools like CheerpX. Additionally, it will explain how to set up an Nginx server to serve the image and related files. By the end of this guide, you'll have a custom disk image ready for use and a functioning server to host it. Follow the steps below to get started.
+CheerpX examples are self-contained and demonstrate specific use cases of the technology with the simplest possible setup. All examples require a custom ext2 image to be build and a local Web server to serve the page. This directory contains a known-good configuration for `nginx` which we recommend to use for these examples.
+
+All the following commands should be run from one of the sub-directories of this directory.
 
 ## 1. Creating the Disk Image
 
@@ -63,7 +65,7 @@ Use the included `nginx.conf` file to run a server with the disk image.
 Run the following command to start Nginx using the provided configuration:
 
 ```bash
-nginx -c nginx.conf -p .
+nginx -c ../nginx.conf -p .
 ```
 
 Navigate to http://localhost:8080/ in your browser to verify the setup.
