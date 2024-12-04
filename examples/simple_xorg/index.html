@@ -25,13 +25,13 @@
       // Setup the text console
       cx.setConsole(document.getElementById("console"));
       // Setup the KMS canvas with the desired resolution, assume `display` is a <canvas> element
-      cx.setKmsCanvas(document.getElementById("display"), 1024, 768);
+      cx.setKmsCanvas(document.getElementById("display"), 768, 1024);
       // Start Xorg
       await cx.run("/usr/bin/Xorg", ["-retro"]);
     </script>
   </head>
-  <body style="height: 100%; background: black; display: flex; flex-direction: row;">
-    <pre id="console" style="height: 100%; width: 50%;"></pre>
+  <body style="height: 100%; background: black; margin: 0; display: flex; flex-direction: row;">
+    <pre id="console" style="height: 100%; width: 50%; margin: 0;"></pre>
     <canvas id="display" width="1024" height="768" style="height: 100%; width: 50%;"></canvas>
   </body>
 </html>
