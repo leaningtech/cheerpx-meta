@@ -17,8 +17,8 @@
         ],
       });
 
+      // Setup the text console
       cx.setConsole(document.getElementById("console"));
-
       // Run the Python3 REPL in the browser
       await cx.run("/usr/bin/python3", []);
 

@@ -13,11 +13,13 @@
       const dataDevice =  await CheerpX.DataDevice.create();
 
       const cx = await CheerpX.Linux.create({
-        mounts: [{ type: "ext2", path: "/", dev: overlayDevice },
-                 { type: "dir", path: "/data", dev: dataDevice }
+        mounts: [
+          { type: "ext2", path: "/", dev: overlayDevice },
+          { type: "dir", path: "/data", dev: dataDevice }
         ],
       });
 
+      // Setup the text console
       cx.setConsole(document.getElementById("console"));
 
       async function compileAndRun(cx, dataDevice, srcCode, inputName, outputName)

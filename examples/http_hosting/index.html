@@ -16,14 +16,15 @@
         networkInterface: { authKey: "YOUR KEY", netmapUpdateCb },
       });
 
+      // Setup the text console
       cx.setConsole(document.getElementById("console"));
 
       function netmapUpdateCb(map) {
         const currentIp = map.self.addresses[0];
         console.log(`Current IP address ${currentIp}`);
       }
-
-
+      // Start the builin python HTTP server, it will be reachable
+      // from other devices in your Tailscale network
       await cx.run("/usr/bin/python3", ["-m", "http.server"]);
     </script>
   </head>
