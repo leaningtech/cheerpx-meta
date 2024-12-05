@@ -1,5 +1,9 @@
 CheerpX: X86 virtualization for the Web
 
+Version 1.0.8:
+	* New feature1
+	* New feature2
+
 Version 1.0.7:
 	* Improve robustness of syscalls
 	* Support multiple ext2 mount points
