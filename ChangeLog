@@ -1,5 +1,9 @@
 CheerpX: X86 virtualization for the Web
 
+Version 1.0.8:
+	* Lazily allocate memory for ELF headers
+	* Improve correctness of /proc information
+
 Version 1.0.7:
 	* Improve robustness of syscalls
 	* Support multiple ext2 mount points
