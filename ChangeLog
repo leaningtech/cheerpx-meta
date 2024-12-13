@@ -1,5 +1,9 @@
 CheerpX: X86 virtualization for the Web
 
+Version 1.0.9:
+	* Improve PTYs support
+	* Improve SSE correctness
+
 Version 1.0.8:
 	* Lazily allocate memory for ELF headers
 	* Improve correctness of /proc information
