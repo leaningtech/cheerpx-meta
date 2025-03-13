@@ -32,9 +32,9 @@ export class Linux {
 	run(fileName: string, args: Array<string>, optionals?: { env?: string[]; cwd?: string; uid?: number; gid?: number; }): Promise<{ status: number }>;
 	setActivateConsole(activateFunc: (_: number) => void): EventListener;
 	setConsole(e: HTMLElement): void;
-	setCustomConsole(writeFunc: (buffer: Uint8Array, bufferLength: number) => void, columns: number, rows: number): EventListener;
-	registerCallback(eventName: string, cb: EventListener): void;
-	unregisterCallback(eventName: string, cb: EventListener): void;
+	setCustomConsole(writeFunc: (buffer: Uint8Array, vt: number) => void, columns: number, rows: number): (keyCode: number) => void;
+	registerCallback(eventName: string, callback: (state: string | number) => void): void;
+	unregisterCallback(eventName: string, callback: (state: string | number) => void): void;
 }
 export class OverlayDevice extends BlockDevice {
 	static create(src: BlockDevice, idb: IDBDevice): Promise<OverlayDevice>;
