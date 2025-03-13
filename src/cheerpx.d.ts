@@ -1,12 +1,16 @@
-export interface BlockDevice extends Device {
+export interface Device {
+	delete(): void;
 }
 export interface CheerpOSDevice extends Device {
 }
 export interface DataDevice extends CheerpOSDevice {
 	writeFile(path: string, data: string): Promise<void>;
 }
-export interface Device {
-	delete(): void;
+export interface IDBDevice extends CheerpOSDevice {
+	readFileAsBlob(path: string): Promise<Blob>;
+	reset(): Promise<void>;
+}
+export interface BlockDevice extends Device {
 }
 export interface FileDevice extends BlockDevice {
 }
@@ -15,9 +19,6 @@ export interface GitHubDevice extends BlockDevice {
 export interface HttpBytesDevice extends BlockDevice {
 }
 export interface CloudDevice extends BlockDevice {
-}
-export interface IDBDevice extends CheerpOSDevice {
-	readFileAsBlob(path: string): Promise<Blob>;
 }
 export interface Linux {
 	delete(): void;
@@ -29,10 +30,8 @@ export interface Linux {
 	unregisterCallback(eventName: string, cb: EventListener): void;
 }
 export interface OverlayDevice extends BlockDevice {
-	delete(): void;
 }
 export interface WebDevice extends CheerpOSDevice {
-	delete(): void;
 }
 
 interface MountPointConfiguration {

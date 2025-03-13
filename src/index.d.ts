@@ -9,6 +9,8 @@ export class DataDevice extends CheerpOSDevice {
 }
 export class IDBDevice extends CheerpOSDevice {
 	static create(devName: string): Promise<IDBDevice>;
+	readFileAsBlob(path: string): Promise<Blob>;
+	reset(): Promise<void>;
 }
 export class BlockDevice extends Device {
 }
@@ -40,11 +42,13 @@ export class OverlayDevice extends BlockDevice {
 export class WebDevice extends CheerpOSDevice {
 	static create(url: string): Promise<WebDevice>;
 }
+
 interface MountPointConfiguration {
 	type: "ext2" | "dir" | "devs" | "proc";
 	path: string;
 	dev: Device;
 }
+
 interface NetworkInterface {
 	authKey?: string;
 	controlUrl?: string;
