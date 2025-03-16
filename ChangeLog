@@ -1,5 +1,9 @@
 CheerpX: X86 virtualization for the Web
 
+Version 1.1.1:
+	* New feature1
+	* New feature2
+
 Version 1.0.9:
 	* Improve PTYs support
 	* Improve SSE correctness
