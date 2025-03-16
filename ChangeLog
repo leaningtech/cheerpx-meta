@@ -1,5 +1,8 @@
 CheerpX: X86 virtualization for the Web
 
+Version 1.1.1:
+	* Fix a scheduling glitch
+
 Version 1.1.0:
 	* Improve performance
 	* Improve robustness of syscalls
