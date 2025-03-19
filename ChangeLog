@@ -1,5 +1,8 @@
 CheerpX: X86 virtualization for the Web
 
+Version 1.1.2:
+	* Fix Safari support
+
 Version 1.1.1:
 	* Fix a scheduling glitch
 
