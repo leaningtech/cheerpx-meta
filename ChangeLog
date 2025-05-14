@@ -1,5 +1,8 @@
 CheerpX: X86 virtualization for the Web
 
+Version 1.1.4:
+	* Workaround a regression in Firefox 138
+
 Version 1.1.3:
 	* Improve inotify support
 	* Reduce WebAssembly code size
