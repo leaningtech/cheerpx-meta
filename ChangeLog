@@ -1,5 +1,8 @@
 CheerpX: X86 virtualization for the Web
 
+Version 1.1.5:
+	* Fix inotify implementation
+
 Version 1.1.4:
 	* Workaround a regression in Firefox 138
 
