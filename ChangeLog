@@ -1,5 +1,8 @@
 CheerpX: X86 virtualization for the Web
 
+Version 1.2.1:
+	* Fix NPM automation
+
 Version 1.2.0:
 	* Improved support for Go
 	* Improved support for WINE
