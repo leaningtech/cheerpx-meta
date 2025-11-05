@@ -1,5 +1,6 @@
 const version="1.1.7"
-const CheerpX = await import(`https://cxrtnc.leaningtech.com/${version}/cx.esm.js`);
+const dynImport = new Function("x", "return import(x)");
+const CheerpX = await dynImport(`https://cxrtnc.leaningtech.com/${version}/cx.esm.js`);
 export const Linux = CheerpX.Linux;
 export const HttpBytesDevice = CheerpX.HttpBytesDevice;
 export const CloudDevice = CheerpX.CloudDevice;
