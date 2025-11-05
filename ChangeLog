@@ -1,5 +1,10 @@
 CheerpX: X86 virtualization for the Web
 
+Version 1.2.0:
+	* Improved support for Go
+	* Improved support for WINE
+	* Improved support for embedding in Next.js projects
+
 Version 1.1.7:
 	* Work around CI misconfiguration
 
