@@ -1,5 +1,9 @@
 CheerpX: X86 virtualization for the Web
 
+Version 1.2.2:
+	* Fixed a regression on the disk backend
+	* Restored Alpine boot
+
 Version 1.2.1:
 	* Fix NPM automation
 
