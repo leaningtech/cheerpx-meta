@@ -1,4 +1,4 @@
-const version="1.2.2"
+const version="1.2.3"
 const dynImport = new Function("x", "return import(x)");
 const CheerpX = await dynImport(`https://cxrtnc.leaningtech.com/${version}/cx.esm.js`);
 export const Linux = CheerpX.Linux;

@@ -1,5 +1,8 @@
 CheerpX: X86 virtualization for the Web
 
+Version 1.2.3:
+	* Fix support for DNS on newer versions of glibc
+
 Version 1.2.2:
 	* Fixed a regression on the disk backend
 	* Restored Alpine boot
