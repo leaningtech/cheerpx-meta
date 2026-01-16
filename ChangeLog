@@ -1,5 +1,9 @@
 CheerpX: X86 virtualization for the Web
 
+Version 1.2.4:
+	* Performance improvement
+	* Networking improvements
+
 Version 1.2.3:
 	* Fix support for DNS on newer versions of glibc
 
