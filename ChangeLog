@@ -1,5 +1,8 @@
 CheerpX: X86 virtualization for the Web
 
+Version 1.2.6:
+	* Work around CI misconfiguration
+
 Version 1.2.5:
 	* Work around CI misconfiguration
 
