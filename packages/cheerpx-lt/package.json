@@ -1,6 +1,6 @@
 {
   "name": "@leaningtech/cheerpx",
-  "version": "1.2.7",
+  "version": "1.2.8",
   "type": "module",
   "main": "index.js",
   "types": "index.d.ts",
