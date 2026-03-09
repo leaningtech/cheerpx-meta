@@ -1,5 +1,8 @@
 CheerpX: X86 virtualization for the Web
 
+Version 1.2.9:
+	* Fix access beyond disk size
+
 Version 1.2.8:
 	* Fix a JIT compilation error
 
