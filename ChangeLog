@@ -1,5 +1,8 @@
 CheerpX: X86 virtualization for the Web
 
+Version 1.2.10:
+	* Implement CLOCK_REALTIME_COARSE
+
 Version 1.2.9:
 	* Fix access beyond disk size
 
