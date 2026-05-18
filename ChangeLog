@@ -1,5 +1,8 @@
 CheerpX: X86 virtualization for the Web
 
+Version 1.3.3:
+	* No longer error on inet SO_RCVBUF
+
 Version 1.3.2:
 	* Error on llseek invalid arguments
 
