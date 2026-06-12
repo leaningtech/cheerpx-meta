@@ -1,5 +1,8 @@
 CheerpX: X86 virtualization for the Web
 
+Version 1.3.5:
+	* Networking improvements
+
 Version 1.3.4:
 	* Fix a race in networking
 	* Add improvements to epoll syscall
