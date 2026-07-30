@@ -1,5 +1,12 @@
 CheerpX: X86 virtualization for the Web
 
+Version 1.3.6:
+	* Fix issue with epoll
+	* Handle ext2 images with odd sized last group
+	* Update timestamps when writing data
+	* Handle interactions between signals and futexes
+	* Implement inotify_rm_watch
+
 Version 1.3.5:
 	* Networking improvements
 
