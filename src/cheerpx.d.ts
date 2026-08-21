@@ -4,7 +4,7 @@ export interface Device {
 export interface CheerpOSDevice extends Device {
 }
 export interface DataDevice extends CheerpOSDevice {
-	writeFile(path: string, data: string): Promise<void>;
+	writeFile(path: string, data: string | Uint8Array): Promise<void>;
 }
 export interface IDBDevice extends CheerpOSDevice {
 	readFileAsBlob(path: string): Promise<Blob>;
