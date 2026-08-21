@@ -5,7 +5,7 @@ export class CheerpOSDevice extends Device {
 }
 export class DataDevice extends CheerpOSDevice {
 	static create(): Promise<DataDevice>;
-	writeFile(path: string, data: string): Promise<void>;
+	writeFile(path: string, data: string | Uint8Array): Promise<void>;
 }
 export class IDBDevice extends CheerpOSDevice {
 	static create(devName: string): Promise<IDBDevice>;
