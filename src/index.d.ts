@@ -9,7 +9,7 @@ export class DataDevice extends CheerpOSDevice {
 }
 export class IDBDevice extends CheerpOSDevice {
 	static create(devName: string): Promise<IDBDevice>;
-	readFileAsBlob(path: string): Promise<Blob>;
+	readFileAsBlob(path: string): Promise<Blob | null>;
 	reset(): Promise<void>;
 }
 export class BlockDevice extends Device {
