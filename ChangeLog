@@ -1,5 +1,9 @@
 CheerpX: X86 virtualization for the Web
 
+Version 1.4.0:
+	* Clearer error messages
+	* Syscalls EFAULT when trying to read from a bad address
+
 Version 1.3.9:
 	* Fix several issues with sockets
 	* Fix an issue with select
